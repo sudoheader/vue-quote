@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <app-quote v-for="quote in quotes">{{ quote }}</app-quote>
+	<app-quote v-for="quote in quotes" :key="quote">{{ quote }}</app-quote>
   </div>
 </template>
 
@@ -8,10 +8,10 @@
   import Quote from './Quote.vue';
 
   export default {
-    props: ['quotes'],
-    components:{
-      appQuote: Quote
-    }
+	props: ['quotes'],
+	components: {
+	  appQuote: Quote
+	}
   }
 </script>
 
